@@ -49,41 +49,41 @@ export default function ContactPage() {
       </section>
 
       {/* ================= Contact Form ================= */}
-      <section className="container mx-auto px-4 pb-24">
+      <section className="container mx-auto  px-4 pb-24">
         <div className="max-w-3xl mx-auto bg-white/10 backdrop-blur rounded-xl p-10">
 
           <h2 className="text-3xl font-bold text-white text-center mb-8">
             Send Us a Message
           </h2>
 
-          <form className="grid gap-6">
+          <form className="grid  gap-6">
             <input
               type="text"
               placeholder="Your Name"
-              className="rounded-lg bg-white px-4 py-3 border focus:ring-2 focus:ring-blue-500 outline-none"
+              className="rounded-lg bg-white text-gray-900   px-4 py-3 border focus:ring-2 focus:ring-blue-500 outline-none"
             />
 
             <input
               type="email"
               placeholder="Your Email"
-              className="rounded-lg bg-white px-4 py-3 border focus:ring-2 focus:ring-blue-500 outline-none"
+              className="rounded-lg bg-white text-gray-900  px-4 py-3 border focus:ring-2 focus:ring-blue-500 outline-none"
             />
 
             <input
               type="text"
               placeholder="Subject"
-              className="rounded-lg bg-white px-4 py-3 border focus:ring-2 focus:ring-blue-500 outline-none"
+              className="rounded-lg bg-white text-gray-900  px-4 py-3 border focus:ring-2 focus:ring-blue-500 outline-none"
             />
 
             <textarea
               rows={5}
               placeholder="Your Message"
-              className="rounded-lg bg-white px-4 py-3 border resize-none focus:ring-2 focus:ring-blue-500 outline-none"
+              className="rounded-lg bg-white text-gray-900 px-4 py-3 border resize-none focus:ring-2 focus:ring-blue-500 outline-none"
             />
 
             <button
               type="submit"
-              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition"
+              className="bg-blue-600  hover:bg-blue-700 font-semibold py-3 rounded-lg transition"
             >
               Submit Message
             </button>

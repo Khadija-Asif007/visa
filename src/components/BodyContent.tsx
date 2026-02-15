@@ -272,7 +272,7 @@ export default function HomeBody() {
 
 
           </p>
-           <div className="w-[150px] h-[150px] border border-gray-400 rounded-md overflow-hidden hover:scale-105 transition-transform duration-200">
+           <div className="w-37.5 h-37.5 border border-gray-400 rounded-md overflow-hidden hover:scale-105 transition-transform duration-200">
       <Image
         src="/small.visa.jpg"  // apni image ka path yahan
         alt="Box Image"
