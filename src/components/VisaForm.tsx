@@ -2,7 +2,13 @@
 
 import { useState } from "react";
 import { MessageCircle } from "lucide-react";
+import { useMemo } from "react";
+import dynamic from "next/dynamic";
+import countryList from "react-select-country-list";
 
+const Select = dynamic(() => import("react-select"), {
+  ssr: false,
+});
 interface VisaFormData {
   firstName: string;
   lastName: string;
@@ -25,6 +31,8 @@ export default function VisaForm() {
     zip: "",
     country: "",
   });
+  const options = useMemo(() => countryList().getData(), []);
+const [country, setCountry] = useState<any>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -140,18 +148,24 @@ export default function VisaForm() {
                 className="bg-white border border-gray-300 rounded-md px-4 py-3 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 outline-none"
               />
 
-              <select
-                name="country"
-                onChange={handleChange}
-                className="bg-white border border-gray-300 rounded-md px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none"
-              >
-                <option value="">Select Country</option>
-                <option>Canada</option>
-                <option>India</option>
-                <option>Pakistan</option>
-                <option>UAE</option>
-              </select>
+              {/* 🔥 UPDATED COUNTRY SECTION */}
+              <div>
+                <label className="block text-gray-700 font-semibold mb-2">
+                  Country
+                </label>
+
+                <Select
+                  options={options}
+                  value={country}
+                  onChange={(selectedOption: any) => setCountry(selectedOption)}
+                  placeholder="Search & Select Country"
+                  className="text-black"
+                  classNamePrefix="select"
+                  isSearchable
+                />
+              </div>
             </div>
+
 
             {/* File Uploads */}
 <div className="space-y-6 pt-4">
